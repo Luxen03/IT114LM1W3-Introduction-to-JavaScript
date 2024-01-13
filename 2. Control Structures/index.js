@@ -75,15 +75,11 @@ list.forEach(item => console.log(item));
 // foreach is for getting each item in an array
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
+const numerator = Math.floor((Math.random() * 100) + 1);
+const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
 try {
-    const numerator = Math.floor((Math.random() * 100) + 1);
-    const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
     if (denominator == 0) throw Error("Division by Zero");
     const quotient = numerator / denominator;
 }
-catch(e) {
-    console.log("ERROR!!!", e);
-}
-finally {
-    console.log("cleaning...");
-}
+catch(e) { console.log("ERROR!!!", e); }
+finally { console.log("cleaning..."); }
