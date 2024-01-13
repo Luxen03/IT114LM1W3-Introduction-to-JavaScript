@@ -78,11 +78,11 @@ list.forEach(item => console.log(item));
 try {
     const numerator = Math.floor((Math.random() * 100) + 1);
     const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
-
+    if (denominator == 0) throw Error("Division by Zero");
     const quotient = numerator / denominator;
 }
-catch {
-    console.log("ERROR!!!");
+catch(e) {
+    console.log("ERROR!!!", e);
 }
 finally {
     console.log("cleaning...");
