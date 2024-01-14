@@ -32,24 +32,61 @@ console.log("average " + sum / numbers.length);
 
 // Checkpoint 3.1 How would you compare lists in python vs arrays in JavaScript
 // Answer: 
+//javascript has more versetality in methods than it does with python
 
 // Todo 3.3 Declare an object with information about IT114L (course code, name, units, number of students)
 // Your code here
+let IT114L = {
+    "coursecode": 114,
+    "name": "IT144L",
+    "units": 3,
+    "numberOfStudents": 40,
+}
+
 
 // Todo 3.4 Add professor name as one of the fields of the object. Display the value of professor name.
 // Your code here
-
+IT114L.professorName = "Job Lipat";
+console.log(IT114L.professorName);
 // Todo 3.5 Declare and array of objects with information about the courses you are taking this term
 // Your code here
+const courses = [
+    {
+        "coursecode": 114,
+        "name": "IT144L",
+        "units": 3,
+        "numberOfStudents": 40,
+        "professorName": "Job Lipat"
+    }, {
+        "coursecode": 107,
+        "name": "CS107",
+        "units": 3,
+        "numberOfStudents": 40,
+        "professorName": "KG Kikuchi"
+    }, {
+        "coursecode": 400,
+        "name": "VE400",
+        "units": 3,
+        "numberOfStudents": 40,
+        "professorName": "Maam Binibini"
+    }
+];
 
 // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
 // Your code here
+let sum2 = 0;
+for (const course of courses) sum2 += course.units;
+console.log(sum2);
 
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
 // Answer: 
+// both javascript and python have classes, javascript OOP however is more related to C than in python
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
+let numbers2 = [...numbers, 540];
 
 // Todo 3.7 Going back to your IT114L object, extract the course code and units using the spread operator
 // Your code here
+let {coursecode, units} = {...IT114L};
+console.log(coursecode, units);
