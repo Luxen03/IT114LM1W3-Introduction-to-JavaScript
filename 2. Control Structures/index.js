@@ -43,13 +43,9 @@ const list = ["apple", "banana", "cherry", "date", "elderberry"];
 let i = 0;
 while (i < list.length) console.log(list[i++]);
 
-// Checkpoint 2.3 How would you simulate a do-while loop in JavaScript
+// Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
-//  function F(){}
-//  F();
-//  while (###){
-//      F();
-//  }
+//do while runs the iteration atleast once before checking the conditions
 
 //  this way, the function will run before it reaches the while loop; making it simulate a do while
 
